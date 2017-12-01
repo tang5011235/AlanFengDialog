@@ -11,6 +11,17 @@ import android.widget.Toast;
  */
 
 public class EtDialogAdapter extends BaseDialogAdapter {
+
+    /**
+     * 获取dialog的界面View
+     *
+     * @param builder
+     * @return
+     */
+    public EtDialogAdapter(Builder builder) {
+        super(builder);
+    }
+
     @Override
     public int getLayoutId() {
         return R.layout.dialog_et;

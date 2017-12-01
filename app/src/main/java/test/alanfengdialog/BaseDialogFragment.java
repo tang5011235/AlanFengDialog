@@ -1,11 +1,10 @@
 package test.alanfengdialog;
 
+import android.app.Dialog;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 
 /**
@@ -25,7 +24,14 @@ public class BaseDialogFragment extends DialogFragment{
     }
 
 
-    @Nullable
+    @NonNull
+    @Override
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        mBaseDialogAdapter.setDialogFragment(this);
+        return mBaseDialogAdapter.setAlertDialogBuilder();
+    }
+
+   /* @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (mBaseDialogAdapter != null) {
@@ -33,7 +39,7 @@ public class BaseDialogFragment extends DialogFragment{
             mBaseDialogAdapter.setDialogFragment(this);
         }
         return mRootView;
-    }
+    }*/
 
 
     @Override

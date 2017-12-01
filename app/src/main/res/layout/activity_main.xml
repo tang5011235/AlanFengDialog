@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,14 +8,42 @@
     android:background="#ffff"
     tools:context="test.alanfengdialog.MainActivity">
 
-    <TextView
-        android:onClick="click"
+    <LinearLayout
+        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/show_etd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickEt"
+            android:text="带有EditText的dialog"
+            />
+
+        <Button
+            android:id="@+id/show_pdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickEt"
+            android:text="带有EditText的DatePicerdialog"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickEt"
+            android:text="带有EditText的dialog"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickEt"
+            android:text="带有EditText的dialog"
+            />
+
+    </LinearLayout>
+</RelativeLayout>
