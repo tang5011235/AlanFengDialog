@@ -11,7 +11,7 @@ import android.view.Window;
  * Created by Administrator on 2017/11/30.
  */
 
-public class BaseDialogFragment extends DialogFragment{
+public class BaseDialogFragment extends DialogFragment {
 
     private int mRootViewId;
     private View mRootView;
@@ -30,16 +30,6 @@ public class BaseDialogFragment extends DialogFragment{
         mBaseDialogAdapter.setDialogFragment(this);
         return mBaseDialogAdapter.setAlertDialogBuilder();
     }
-
-   /* @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if (mBaseDialogAdapter != null) {
-            mRootView = mBaseDialogAdapter.getContentView(getActivity());
-            mBaseDialogAdapter.setDialogFragment(this);
-        }
-        return mRootView;
-    }*/
 
 
     @Override
