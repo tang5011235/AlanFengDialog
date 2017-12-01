@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 public abstract class BaseDialogAdapter {
 
     private View mParent;
-    public BaseDialogFragment mBaseDialogFragment;
+    protected BaseDialogFragment mBaseDialogFragment;
     private int mGravity;
     private int mStyle;
     private AlertDialog mDialog;
@@ -93,4 +93,5 @@ public abstract class BaseDialogAdapter {
             return this;
         }
     }
+
 }
